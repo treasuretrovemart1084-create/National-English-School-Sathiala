@@ -1,0 +1,8 @@
+{
+  "name": "National English School Sathiala",
+  "description": "Official website of National English School Sathiala. Your Future Begins Here.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

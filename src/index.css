@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  
+  --color-navy: #0f2744;      /* Deep Dark Blue (Main Theme Color) */
+  --color-navy-dark: #081628; /* Midnight Navy */
+  --color-navy-light: #1b3860;/* Medium Slate Dark Blue */
+  --color-royal: #1e40af;     /* Rich Royal Blue */
+  --color-royal-light: #3b82f6; /* Bright Royal Blue */
+  --color-gold: #f59e0b;      /* Academic Warm Yellow / Gold */
+  --color-gold-light: #fef08a;/* Soft Yellow Highlight */
+  --color-gold-dark: #b45309; /* Deep Amber */
+  --color-school-green: #15803d; /* Rich Emerald Green Accent */
+  --color-school-red: #dc2626;   /* Cardinal Crimson Red Accent */
+  --color-school-yellow: #eab308; /* Bright Academic Yellow Accent */
+  --color-light-blue: #38bdf8;   /* Sky / Light Blue Accent */
+  --color-light-blue-soft: #e0f2fe; /* Soft Ice Light Blue */
+  --color-light-blue-dark: #0284c7; /* Cyan / Deep Light Blue */
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-slate-800 antialiased selection:bg-amber-200 selection:text-slate-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-navy tracking-tight;
+  }
+}
