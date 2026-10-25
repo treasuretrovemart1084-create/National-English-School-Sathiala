@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Users, UserCircle, Mail, BookOpen, Shield, Heart, Target, Award, Phone } from 'lucide-react';
 import facultyHeroImg from '../assets/images/school.png';
-import principalImg from '../assets/images/sir.jpeg';
+import principalImg from '../assets/images/principal.png';
 import { SCHOOL_CONTACT_INFO } from '../data/feeStructureConfig';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string, key?: React.Key }) => (
@@ -95,11 +95,11 @@ function LeadershipSection() {
           <FadeIn className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md p-6 sm:p-10 flex flex-col sm:flex-row items-center gap-8">
             <div className="relative group shrink-0">
               <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 to-amber-400 rounded-3xl blur-sm opacity-30 group-hover:opacity-50 transition-opacity" />
-              <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-2xl overflow-hidden border-2 border-white shadow-xl ring-4 ring-sky-300/40">
+              <div className="relative w-44 sm:w-56 aspect-[346/417] rounded-2xl overflow-hidden border-2 border-white shadow-xl ring-4 ring-sky-300/40">
                 <img 
                   src={principalImg} 
                   alt={`Principal ${SCHOOL_CONTACT_INFO.principalName}`} 
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-top hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
             </div>

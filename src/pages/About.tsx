@@ -2,9 +2,10 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Shield, BookOpen, GraduationCap, Target, Heart, Users, MapPin, Sparkles, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroImg from '../assets/images/school.png';
-import campusLegacyImg from '../assets/images/school_view_10.jpeg';
-import principalImg from '../assets/images/sir.jpeg';
+import heroImg from '../assets/images/school_grad_cap.png';
+import campusLegacyImg from '../assets/images/school_boundary_entrance.png';
+import principalImg from '../assets/images/principal.png';
+import logoImg from '../assets/images/logo.png';
 import { SCHOOL_CONTACT_INFO } from '../data/feeStructureConfig';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string, key?: React.Key }) => (
@@ -95,9 +96,14 @@ export function About() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent"></div>
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-amber-500 text-slate-950 p-6 rounded-2xl shadow-lg hidden sm:block max-w-[220px]">
-                <p className="font-serif text-3xl font-bold mb-1">Your Future</p>
-                <p className="text-xs font-bold uppercase tracking-wider text-slate-900">Begins Here &bull; Sathiala</p>
+              <div className="absolute -bottom-6 -left-6 bg-white text-navy p-4 rounded-2xl shadow-xl hidden sm:flex items-center gap-3.5 border border-slate-100 max-w-[280px]">
+                <div className="h-14 w-14 p-1 bg-white rounded-xl shadow-xs border border-slate-200 shrink-0">
+                  <img src={logoImg} alt="National English School Crest" className="h-full w-full object-contain filter drop-shadow-xs" />
+                </div>
+                <div>
+                  <p className="font-serif text-base font-bold text-navy leading-tight">Your Future Begins Here</p>
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 mt-0.5">Sathiala &bull; Est. 1998</p>
+                </div>
               </div>
             </FadeIn>
           </div>
@@ -166,15 +172,15 @@ export function About() {
             <FadeIn className="lg:col-span-4 flex flex-col items-center">
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 to-amber-400 rounded-3xl blur-sm opacity-30 group-hover:opacity-50 transition-opacity" />
-                <div className="relative h-60 w-60 rounded-3xl overflow-hidden border-2 border-white/30 shadow-2xl ring-4 ring-sky-400/40">
+                <div className="relative w-64 sm:w-72 aspect-[346/417] rounded-3xl overflow-hidden border-2 border-white/30 shadow-2xl ring-4 ring-sky-400/40">
                   <img 
                     src={principalImg} 
                     alt={`Principal ${SCHOOL_CONTACT_INFO.principalName}`} 
-                    className="w-full h-full object-cover object-top" 
+                    className="w-full h-full object-cover object-top hover:scale-[1.02] transition-transform duration-500" 
                   />
-                  <div className="absolute bottom-0 inset-x-0 bg-navy/85 backdrop-blur-xs py-1.5 px-2 text-center border-t border-white/10">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-300">
-                      Head of School
+                  <div className="absolute bottom-0 inset-x-0 bg-navy/85 backdrop-blur-xs py-2 px-3 text-center border-t border-white/10">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-amber-300">
+                      Head of School &bull; {SCHOOL_CONTACT_INFO.principalName}
                     </span>
                   </div>
                 </div>
@@ -186,7 +192,7 @@ export function About() {
                 Leadership Vision &bull; Sathiala
               </div>
               <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
-                "Your Future Begins Here"
+                Your Future <span className="text-amber-300 italic font-medium">Begins Here</span>
               </h2>
               <p className="text-base text-slate-200 leading-relaxed mb-6 max-w-2xl mx-auto lg:mx-0">
                 At National English School Sathiala, we treat every child with the utmost care, guiding them through solid foundations in English literacy, science, mathematics, and moral character. We welcome parents to join hands with us in shaping a generation of leaders.

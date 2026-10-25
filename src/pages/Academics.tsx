@@ -15,9 +15,9 @@ import {
   Users
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import academicsHeroImg from '../assets/images/school.png';
-import curriculumImg from '../assets/images/school_view_14.jpeg';
-import coCurricularImg from '../assets/images/school_view_15.jpeg';
+import academicsHeroImg from '../assets/images/school_grad_cap.png';
+import curriculumImg from '../assets/images/real_classroom.png';
+import coCurricularImg from '../assets/images/camo_stage_performance.png';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string, key?: React.Key }) => (
   <motion.div

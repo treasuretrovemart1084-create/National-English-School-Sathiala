@@ -11,12 +11,12 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import facilitiesHeroImg from '../assets/images/school.png';
-import campusSecurityImg from '../assets/images/school_view_4.jpeg';
-import classImg from '../assets/images/school_view_11.jpeg';
-import sciImg from '../assets/images/school_view_23.jpeg';
-import sportsImg from '../assets/images/school_view_22.jpeg';
-import actImg from '../assets/images/school_view_18.jpeg';
+import facilitiesHeroImg from '../assets/images/school_grad_cap.png';
+import campusSecurityImg from '../assets/images/school_main_gate.png';
+import classImg from '../assets/images/real_classroom.png';
+import sciImg from '../assets/images/real_science_lab.png';
+import receptionImg from '../assets/images/reception_block.png';
+import actImg from '../assets/images/magic_show_mascot.png';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string, key?: React.Key }) => (
   <motion.div
@@ -85,8 +85,8 @@ interface FacilityItem {
 function FacilitiesGrid() {
   const facilities: FacilityItem[] = [
     {
-      title: "Modern Classrooms",
-      desc: "Spacious, well-ventilated classrooms designed with modern seating to facilitate interactive learning and ensure maximum student comfort.",
+      title: "Classrooms",
+      desc: "Spacious, well-ventilated classrooms designed with comfortable seating to facilitate interactive learning and ensure maximum student comfort.",
       icon: Building2,
       imgSrc: classImg
     },
@@ -97,14 +97,14 @@ function FacilitiesGrid() {
       imgSrc: sciImg
     },
     {
-      title: "Playground & Sports",
-      desc: "Expansive play areas and sports facilities to promote physical fitness, teamwork, and healthy competition among students.",
-      icon: Trophy,
-      imgSrc: sportsImg
+      title: "Reception Block",
+      desc: "Welcoming reception and executive office equipped with CCTV security monitoring, visitor assistance, and dedicated parent consultation areas.",
+      icon: Building2,
+      imgSrc: receptionImg
     },
     {
       title: "Activity Areas",
-      desc: "Spaces specially designated for arts, crafts, speech, presentations, and extra-curricular events that spark creativity and cultural awareness.",
+      desc: "Spaces specially designated for arts, speech, presentations, drama, and school celebrations that spark creativity and cultural awareness.",
       icon: Activity,
       imgSrc: actImg
     }

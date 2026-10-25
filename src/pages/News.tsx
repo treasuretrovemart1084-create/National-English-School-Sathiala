@@ -2,13 +2,15 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Calendar, ArrowRight, Tag, Clock, Megaphone, Trophy, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import newsHeroImg from '../assets/images/school.png';
-import admissionsImg from '../assets/images/school.png';
-import exhibitionImg from '../assets/images/school_view_2.jpeg';
-import sportsImg from '../assets/images/school_view_4.jpeg';
-import ptmImg from '../assets/images/school_view_3.jpeg';
-import culturalImg from '../assets/images/school_view_7.jpeg';
-import vacationImg from '../assets/images/school_view_8.jpeg';
+import newsHeroImg from '../assets/images/school_grad_cap.png';
+import boundaryEntranceImg from '../assets/images/school_boundary_entrance.png';
+import exhibitionImg from '../assets/images/real_science_lab.png';
+import magicShowImg from '../assets/images/magic_show_mascot.png';
+import trophiesImg from '../assets/images/annual_trophies_awards.png';
+import camoStageImg from '../assets/images/camo_stage_performance.png';
+import prayerStageImg from '../assets/images/prayer_recitation_stage.png';
+import assemblyImg from '../assets/images/school_assembly.png';
+import speechImg from '../assets/images/student_speech_podium.png';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string, key?: React.Key }) => (
   <motion.div
@@ -70,62 +72,82 @@ function NewsContent() {
     {
       category: "Announcements",
       icon: Megaphone,
-      title: "Admissions Open for Academic Year",
-      date: "August 15, 2024",
-      time: "",
-      desc: "Details regarding the admission process, deadlines, and requirements for the upcoming academic session.",
+      title: "Admissions Open for Playgroup to Matric 2026",
+      date: "Session 2026",
+      time: "Front Office Open Daily",
+      desc: "Enrollment is now open at National English School Sathiala. Parents and guardians are invited to visit our Sathiala campus for admission procedures and prospectus.",
       color: "text-royal bg-royal/10",
-      image: admissionsImg
+      image: boundaryEntranceImg
     },
     {
-      category: "Upcoming Events",
+      category: "Annual Celebrations",
+      icon: Trophy,
+      title: "Annual Function Stage & Character Mascot Gala",
+      date: "School Calendar",
+      time: "10:00 AM",
+      desc: "An unforgettable celebration featuring magic shows, Mickey Mouse performances, and motivational addresses under the official school motto.",
+      color: "text-purple-700 bg-purple-100",
+      image: magicShowImg
+    },
+    {
+      category: "Grand Ceremony",
+      icon: Trophy,
+      title: "Annual Prize Distribution & Academic Honors",
+      date: "Annual Gala",
+      time: "11:00 AM",
+      desc: "Prestigious ceremony presenting 1st Position crystal trophies and academic excellence shields to top-ranking students and board distinction holders.",
+      color: "text-red-700 bg-red-100",
+      image: trophiesImg
+    },
+    {
+      category: "Patriotic Celebrations",
+      icon: Megaphone,
+      title: "Prize Distribution Stage & Theatrical Performance",
+      date: "Annual Gala",
+      time: "12:00 PM",
+      desc: "Energetic and disciplined stage performances by students demonstrating patriotism, teamwork, and creative theatrical skills.",
+      color: "text-amber-700 bg-amber-100",
+      image: camoStageImg
+    },
+    {
+      category: "Spiritual & Moral",
+      icon: BookOpen,
+      title: "Spiritual Recitation & Declamation Session",
+      date: "Special Gathering",
+      time: "09:30 AM",
+      desc: "Heartfelt Hamd, Naat, and moral recitations by students in traditional attire, reflecting deep ethical and spiritual values.",
+      color: "text-blue-700 bg-blue-100",
+      image: prayerStageImg
+    },
+    {
+      category: "Academic Events",
       icon: Calendar,
-      title: "Annual Science Exhibition",
-      date: "September 10, 2024",
-      time: "09:00 AM - 02:00 PM",
-      desc: "Information about the upcoming science fair where students will showcase their innovative projects and experiments.",
+      title: "Science Practical Demonstration & Lab Exhibition",
+      date: "Academic Session",
+      time: "09:00 AM - 01:00 PM",
+      desc: "Students conduct live biology, physics, and chemistry experiments under direct faculty supervision in our laboratory.",
       color: "text-gold-dark bg-gold/10",
       image: exhibitionImg
     },
     {
-      category: "Sports Events",
-      icon: Trophy,
-      title: "Inter-School Sports Tournament",
-      date: "October 5, 2024",
-      time: "",
-      desc: "Summary of the upcoming sports tournament, participating teams, and schedule of events.",
-      color: "text-green-700 bg-green-100",
-      image: sportsImg
-    },
-    {
-      category: "Academic Events",
+      category: "Morning Assembly",
       icon: BookOpen,
-      title: "Parent-Teacher Meeting (PTM)",
-      date: "November 20, 2024",
-      time: "08:30 AM - 01:30 PM",
-      desc: "Schedule and details for the first term Parent-Teacher Meeting to discuss student progress.",
-      color: "text-purple-700 bg-purple-100",
-      image: ptmImg
+      title: "Daily Morning Assembly & Character Mentorship",
+      date: "Regular Routine",
+      time: "08:00 AM",
+      desc: "Outdoor morning assembly instilling national spirit, moral recitations, discipline, and principal guidance.",
+      color: "text-green-700 bg-green-100",
+      image: assemblyImg
     },
     {
-      category: "School Activities",
+      category: "Speech & Declamation",
       icon: Tag,
-      title: "Cultural Day Celebrations",
-      date: "December 12, 2024",
-      time: "",
-      desc: "Highlights of the upcoming cultural day, including performances, dress codes, and activities.",
+      title: "Annual Speech Competition & Head Boy Address",
+      date: "Co-Curriculars",
+      time: "Stage Auditorium",
+      desc: "Fostering leadership and public speaking skills as students address the student body from the official school podium.",
       color: "text-orange-700 bg-orange-100",
-      image: culturalImg
-    },
-    {
-      category: "Important Notices",
-      icon: Megaphone,
-      title: "Winter Vacation Schedule",
-      date: "December 20, 2024",
-      time: "",
-      desc: "Official announcement regarding the dates for winter vacations and school reopening schedule.",
-      color: "text-red-700 bg-red-100",
-      image: vacationImg
+      image: speechImg
     }
   ];
 

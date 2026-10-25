@@ -1,30 +1,21 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ZoomIn, Image as ImageIcon } from 'lucide-react';
-import galleryHeroImg from '../assets/images/school.png';
-import img1 from '../assets/images/custom_gallery_1.png';
-import img2 from '../assets/images/school_view.jpeg';
-import img3 from '../assets/images/school_view_2.jpeg';
-import img4 from '../assets/images/school_view_3.jpeg';
-import img5 from '../assets/images/school_view_4.jpeg';
-import img6 from '../assets/images/school_view_model.jpeg';
-import img7 from '../assets/images/school_view_7.jpeg';
-import img8 from '../assets/images/school_view_8.jpeg';
-import img9 from '../assets/images/school_view_9.jpeg';
-import img10 from '../assets/images/school_view_10.jpeg';
-import img11 from '../assets/images/school_view_11.jpeg';
-import img12 from '../assets/images/school_view_12.jpeg';
-import img13 from '../assets/images/school_view_13.jpeg';
-import img14 from '../assets/images/school_view_14.jpeg';
-import img15 from '../assets/images/school_view_15.jpeg';
-import img16 from '../assets/images/school_view_16.jpeg';
-import img17 from '../assets/images/school_view_17.jpeg';
-import img18 from '../assets/images/school_view_18.jpeg';
-import img19 from '../assets/images/school_view_19.jpeg';
-import img20 from '../assets/images/school_view_20.jpeg';
-import img21 from '../assets/images/school_view_21.jpeg';
-import img22 from '../assets/images/school_view_22.jpeg';
-import img23 from '../assets/images/school_view_23.jpeg';
+import galleryHeroImg from '../assets/images/school_grad_cap.png';
+import campusBuildingImg from '../assets/images/school_grad_cap.png';
+import boundaryEntranceImg from '../assets/images/school_boundary_entrance.png';
+import mainGateImg from '../assets/images/school_main_gate.png';
+import magicShowImg from '../assets/images/magic_show_mascot.png';
+import annualTrophiesImg from '../assets/images/annual_trophies_awards.png';
+import camoStageImg from '../assets/images/camo_stage_performance.png';
+import prayerStageImg from '../assets/images/prayer_recitation_stage.png';
+import classroomImg from '../assets/images/real_classroom.png';
+import scienceLabImg from '../assets/images/real_science_lab.png';
+import receptionImg from '../assets/images/reception_block.png';
+import dramaDayImg from '../assets/images/drama_day_stage.png';
+import assemblyImg from '../assets/images/school_assembly.png';
+import speechPodiumImg from '../assets/images/student_speech_podium.png';
+import marqueeEventImg from '../assets/images/school_marquee_event.png';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => (
   <motion.div
@@ -38,20 +29,108 @@ const FadeIn = ({ children, delay = 0, className = "" }: { children: React.React
   </motion.div>
 );
 
-const CATEGORIES = ["All", "Campus", "Classrooms", "Students", "Events", "Sports", "Activities"];
+const CATEGORIES = ["All", "Campus", "Events", "Students", "Classrooms", "Activities"];
 
-const ALL_IMAGES = [
-  img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13,
-  img14, img15, img16, img17, img18, img19, img20, img21, img22, img23
+const GALLERY_ITEMS = [
+  {
+    id: 0,
+    category: "Campus",
+    title: "National English School Campus & Graduation Cap",
+    src: campusBuildingImg,
+    aspect: "aspect-[4/3]"
+  },
+  {
+    id: 1,
+    category: "Campus",
+    title: "National English School Sathiala Entrance & Signboard",
+    src: boundaryEntranceImg,
+    aspect: "aspect-[4/3]"
+  },
+  {
+    id: 2,
+    category: "Events",
+    title: "Annual Function Stage with Magician & Mickey Mascot",
+    src: magicShowImg,
+    aspect: "aspect-[4/3]"
+  },
+  {
+    id: 3,
+    category: "Events",
+    title: "Annual Prize Distribution 1st Position Crystal Trophies",
+    src: annualTrophiesImg,
+    aspect: "aspect-[4/3]"
+  },
+  {
+    id: 4,
+    category: "Events",
+    title: "Annual Prize Distribution Ceremony Stage Performance",
+    src: camoStageImg,
+    aspect: "aspect-[4/3]"
+  },
+  {
+    id: 5,
+    category: "Activities",
+    title: "Annual Ceremony Recitation & Stage Presentation",
+    src: prayerStageImg,
+    aspect: "aspect-[4/3]"
+  },
+  {
+    id: 6,
+    category: "Campus",
+    title: "Campus Main Gate & Security Entrance",
+    src: mainGateImg,
+    aspect: "aspect-[4/3]"
+  },
+  {
+    id: 7,
+    category: "Classrooms",
+    title: "Classroom Learning & Student Engagement",
+    src: classroomImg,
+    aspect: "aspect-[3/4]"
+  },
+  {
+    id: 8,
+    category: "Students",
+    title: "Science Laboratory & Practical Examination",
+    src: scienceLabImg,
+    aspect: "aspect-[3/4]"
+  },
+  {
+    id: 9,
+    category: "Campus",
+    title: "Reception & Administrative Office Block",
+    src: receptionImg,
+    aspect: "aspect-[4/3]"
+  },
+  {
+    id: 10,
+    category: "Events",
+    title: "Annual Drama Day Stage Performance",
+    src: dramaDayImg,
+    aspect: "aspect-[4/3]"
+  },
+  {
+    id: 11,
+    category: "Activities",
+    title: "Morning Assembly on Campus Grounds",
+    src: assemblyImg,
+    aspect: "aspect-[4/3]"
+  },
+  {
+    id: 12,
+    category: "Activities",
+    title: "Student Leadership Speech from Official Podium",
+    src: speechPodiumImg,
+    aspect: "aspect-[3/4]"
+  },
+  {
+    id: 13,
+    category: "Events",
+    title: "Annual Ceremony in Grand Marquee",
+    src: marqueeEventImg,
+    aspect: "aspect-[4/3]"
+  }
 ];
-
-const GALLERY_ITEMS = Array.from({ length: 23 }).map((_, i) => ({
-  id: i,
-  category: CATEGORIES[(i % (CATEGORIES.length - 1)) + 1], // Cycle through categories, skip "All"
-  title: `Image ${i + 1}`,
-  src: ALL_IMAGES[i],
-  aspect: i % 3 === 0 ? "aspect-square" : i % 2 === 0 ? "aspect-[4/3]" : "aspect-[3/4]"
-}));
 
 export function Gallery() {
   const [activeCategory, setActiveCategory] = useState("All");

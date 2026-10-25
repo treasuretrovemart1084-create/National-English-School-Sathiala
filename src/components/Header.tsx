@@ -27,8 +27,8 @@ export function Header() {
       {/* Decorative Brand Accent Line - Light Blue, Gold, and Emerald */}
       <div className="h-1 w-full bg-gradient-to-r from-sky-400 via-amber-400 to-sky-400" />
 
-      {/* Top Bar - Dark Blue Bar with Light Blue, Green & Yellow Accents */}
-      <div className="hidden md:flex items-center justify-between px-6 py-2 bg-navy text-white text-xs font-medium tracking-wide border-b border-navy-light">
+      {/* Top Bar - Black Bar with Light Blue, Green & Yellow Accents */}
+      <div className="hidden md:flex items-center justify-between px-6 py-2 bg-black text-white text-xs font-medium tracking-wide border-b border-neutral-800">
         <div className="flex items-center gap-5">
           <a 
             href={`tel:${SCHOOL_CONTACT_INFO.phonePrimary.replace(/[^0-9]/g, '')}`} 
@@ -54,10 +54,6 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-4 text-[11px] text-slate-300">
-          <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-sky-500/20 text-sky-200 border border-sky-400/30">
-            <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
-            <span>Admissions Open 2026</span>
-          </div>
           <div className="flex items-center gap-1 text-slate-200">
             <MapPin className="w-3.5 h-3.5 text-red-400" />
             <span>Sathiala</span>
@@ -86,10 +82,8 @@ export function Header() {
             <span className="font-serif text-lg sm:text-xl font-bold leading-none text-navy group-hover:text-royal transition-colors">
               National English School
             </span>
-            <span className="text-[0.65rem] sm:text-xs font-semibold tracking-wider text-slate-500 uppercase mt-1 flex items-center gap-1.5">
-              <span>Sathiala</span>
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-              <span className="text-[10px] text-sky-600 font-bold normal-case tracking-normal">Your Future Begins Here</span>
+            <span className="text-[0.68rem] sm:text-xs font-semibold tracking-wider text-slate-500 uppercase mt-1">
+              Sathiala
             </span>
           </div>
         </Link>

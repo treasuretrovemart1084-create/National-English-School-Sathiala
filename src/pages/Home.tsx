@@ -27,10 +27,13 @@ import {
 import { Link } from 'react-router-dom';
 import heroImage from '../assets/images/school_hero_clean.png';
 import campusImg from '../assets/images/school_hero_clean.png';
-import principalImg from '../assets/images/sir.jpeg';
-import eventAdmissionsImg from '../assets/images/school.png';
-import eventScienceImg from '../assets/images/school_view_2.jpeg';
-import eventSportsImg from '../assets/images/school_view_4.jpeg';
+import principalImg from '../assets/images/principal.png';
+import logoImg from '../assets/images/logo.png';
+import eventAdmissionsImg from '../assets/images/school_boundary_entrance.png';
+import eventScienceImg from '../assets/images/real_science_lab.png';
+import eventDramaImg from '../assets/images/magic_show_mascot.png';
+import eventTrophiesImg from '../assets/images/annual_trophies_awards.png';
+import eventCamoImg from '../assets/images/camo_stage_performance.png';
 import { SCHOOL_CONTACT_INFO, SCHOOL_FEE_STRUCTURE } from '../data/feeStructureConfig';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string, key?: React.Key }) => (
@@ -360,10 +363,10 @@ function ProgramsSection() {
 
 function FacilitiesSection() {
   const facilities = [
-    { icon: Building2, title: "Modern Classrooms" },
+    { icon: Building2, title: "Classrooms" },
     { icon: Microscope, title: "Science Laboratories" },
-    { icon: Trophy, title: "Sports & Playgrounds" },
-    { icon: Activity, title: "Co-Curricular Activity Areas" },
+    { icon: Building2, title: "Reception Block" },
+    { icon: Activity, title: "Activity & Event Spaces" },
   ];
 
   return (
@@ -409,13 +412,13 @@ function PrincipalSection() {
                   <img 
                     src={principalImg} 
                     alt={`Principal ${SCHOOL_CONTACT_INFO.principalName}`} 
-                    className="w-full aspect-[4/4.4] object-cover object-top hover:scale-[1.02] transition-transform duration-500"
+                    className="w-full aspect-[346/417] object-cover object-top hover:scale-[1.02] transition-transform duration-500" 
                   />
                   {/* Subtle inner gradient badge */}
-                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy via-navy/80 to-transparent p-4 text-center">
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy via-navy/85 to-transparent p-4 text-center">
                     <span className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-300 uppercase tracking-wider bg-navy/90 backdrop-blur-md px-3 py-1 rounded-full border border-amber-400/30 shadow-xs">
                       <Award className="w-3.5 h-3.5 text-amber-400" />
-                      Head of School &bull; Sir Abdul Salam
+                      Head of School &bull; {SCHOOL_CONTACT_INFO.principalName}
                     </span>
                   </div>
                 </div>
@@ -451,14 +454,16 @@ function PrincipalSection() {
               </div>
 
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mb-4 leading-tight">
-                "Your Future Begins Here"
+                Your Future <span className="text-royal italic font-medium">Begins Here</span>
               </h2>
 
-              <div className="relative mb-6">
-                <Quote className="h-10 w-10 text-sky-400/40 absolute -top-4 -left-2 -z-0" />
-                <p className="text-base sm:text-lg text-slate-700 leading-relaxed italic relative z-10 pl-6 border-l-2 border-sky-400">
-                  "Welcome to National English School Sathiala. Our guiding philosophy is that each student possesses immense, unique potential. Through dedicated teaching, disciplined character development, and modern academic standards, we empower every learner with the confidence to step forward and succeed in life."
-                </p>
+              <div className="relative mb-6 p-5 sm:p-6 rounded-2xl bg-white/95 border border-sky-100 shadow-xs">
+                <div className="flex items-start gap-4">
+                  <div className="w-1.5 h-12 bg-gradient-to-b from-sky-400 via-royal to-amber-400 rounded-full shrink-0 mt-1" />
+                  <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-sans">
+                    Welcome to National English School Sathiala. Our guiding philosophy is that each student possesses immense, unique potential. Through dedicated teaching, disciplined character development, and modern academic standards, we empower every learner with the confidence to step forward and succeed in life.
+                  </p>
+                </div>
               </div>
 
               {/* 3 Executive Pillars */}
@@ -544,26 +549,26 @@ function NewsSection() {
       month: "AUG",
       dateStr: "Admissions Session 2026",
       title: "Admissions Open for Playgroup to Matric",
-      desc: "Registration is open at National English School Sathiala. Prospectus is available at the front office for PKR 200.",
+      desc: "Registration is open at National English School Sathiala. Visit our campus office for admission forms and prospectus.",
       image: eventAdmissionsImg
     },
     {
       id: 2,
       day: "10",
       month: "SEP",
-      dateStr: "Academic Event",
-      title: "Annual Science & Practical Exhibition",
-      desc: "Students of National English School showcase their scientific models, computer experiments, and practical projects.",
-      image: eventScienceImg
+      dateStr: "Annual Gala",
+      title: "Annual Function Stage & Character Mascot Gala",
+      desc: "Celebrations featuring stage performances, magic shows, Mickey Mouse mascot, and motivational addresses under our school motto.",
+      image: eventDramaImg
     },
     {
       id: 3,
       day: "05",
       month: "OCT",
-      dateStr: "Sports Gala",
-      title: "Annual Athletic & Sports Tournament",
-      desc: "Promoting physical fitness, teamwork, and healthy sportsmanship among all grade levels on our campus.",
-      image: eventSportsImg
+      dateStr: "Annual Prize Ceremony",
+      title: "Annual Prize Distribution & Academic Honors",
+      desc: "Prestigious honors ceremony awarding 1st Position crystal trophies and distinction shields to top achievers and board position holders.",
+      image: eventTrophiesImg
     }
   ];
 
@@ -807,13 +812,21 @@ function FAQSection() {
 
 function CTASection() {
   return (
-    <section className="py-20 bg-navy relative overflow-hidden border-t border-navy-light text-white">
+    <section className="py-24 bg-navy relative overflow-hidden border-t border-sky-500/30 text-white">
+      {/* Sky Blue Smoky Ambient Cloud & Radial Glow Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-500/25 via-sky-600/10 to-transparent pointer-events-none" />
+      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[360px] bg-gradient-to-b from-sky-400/25 via-sky-300/15 to-transparent rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 -left-20 w-[450px] h-[450px] bg-sky-400/20 rounded-full blur-[110px] pointer-events-none" />
+      <div className="absolute -bottom-20 -right-20 w-[500px] h-[400px] bg-sky-300/18 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(56,189,248,0.18),transparent_65%)] pointer-events-none" />
+
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <FadeIn>
-          <span className="text-amber-300 text-xs font-bold tracking-widest uppercase mb-2 inline-block">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-sky-400/20 border border-sky-300/40 text-sky-200 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm backdrop-blur-xs">
+            <Sparkles className="w-3.5 h-3.5 text-amber-300" />
             {SCHOOL_CONTACT_INFO.motto}
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-5">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-5 drop-shadow-md">
             Ready to Enroll at National English School?
           </h2>
           <p className="text-base sm:text-lg text-slate-200 mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -822,13 +835,13 @@ function CTASection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/admissions"
-              className="inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-amber-500 px-8 py-3.5 text-base font-bold text-slate-950 shadow-lg hover:bg-amber-400 transition-all duration-200"
+              className="inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 px-8 py-3.5 text-base font-bold text-slate-950 shadow-xl hover:from-amber-300 hover:to-amber-400 transition-all duration-200"
             >
               Apply for Admission
             </Link>
             <Link
               to="/contact"
-              className="inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-white/10 border border-white/25 px-8 py-3.5 text-base font-bold text-white hover:bg-white hover:text-navy transition-all duration-200"
+              className="inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-sky-950/40 border border-sky-300/40 px-8 py-3.5 text-base font-bold text-white hover:bg-sky-500/20 transition-all duration-200 backdrop-blur-xs"
             >
               Contact Campus Office
             </Link>
@@ -841,19 +854,27 @@ function CTASection() {
 
 function MissionSection() {
   return (
-    <section className="py-16 bg-slate-900 relative overflow-hidden text-white border-y border-slate-800">
-       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
-         <FadeIn>
-            <Quote className="h-9 w-9 text-amber-400 mx-auto mb-6 opacity-90" />
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-medium text-white leading-relaxed mb-6">
-              "Your Future <span className="text-amber-400 font-bold italic">Begins Here</span> through academic excellence, moral integrity, and character building."
-            </h2>
-            <div className="w-20 h-1 bg-amber-400 mx-auto rounded-full"></div>
-            <p className="text-xs uppercase tracking-widest text-slate-400 mt-4 font-semibold">
-              National English School Sathiala
-            </p>
-         </FadeIn>
-       </div>
+    <section className="py-20 bg-navy relative overflow-hidden text-white border-y border-sky-500/30">
+      {/* Sky Blue Smoky Ambient Cloud & Radial Glow Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky-400/25 via-sky-600/10 to-transparent pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[340px] bg-gradient-to-r from-sky-400/20 via-sky-300/25 to-sky-400/20 rounded-full blur-[110px] pointer-events-none" />
+      <div className="absolute -top-16 -left-16 w-80 h-80 bg-sky-400/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-16 -right-16 w-96 h-96 bg-sky-300/18 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <FadeIn>
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-sky-400/20 border border-sky-300/30 text-amber-300 mb-6 shadow-sm backdrop-blur-xs">
+            <Sparkles className="h-6 w-6 text-amber-300" />
+          </div>
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal text-white leading-relaxed mb-6">
+            Your Future <span className="text-amber-300 font-bold italic">Begins Here</span> through academic excellence, moral integrity, and character building.
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-sky-400 via-amber-300 to-sky-400 mx-auto rounded-full"></div>
+          <p className="text-xs uppercase tracking-widest text-sky-200 mt-4 font-semibold">
+            National English School Sathiala
+          </p>
+        </FadeIn>
+      </div>
     </section>
   );
 }

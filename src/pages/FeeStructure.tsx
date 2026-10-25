@@ -16,6 +16,7 @@ import {
 import { Link } from 'react-router-dom';
 import { SCHOOL_FEE_STRUCTURE, SCHOOL_CONTACT_INFO, SchoolFeeItem } from '../data/feeStructureConfig';
 import schoolHeroImg from '../assets/images/school.png';
+import logoImg from '../assets/images/logo.png';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string, key?: React.Key }) => (
   <motion.div
@@ -109,6 +110,34 @@ export function FeeStructure() {
       {/* Main Container */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full flex-grow">
         
+        {/* Official School Institutional Banner */}
+        <div className="mb-6 flex flex-col sm:flex-row items-center justify-between gap-4 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+          <div className="flex items-center gap-4 text-center sm:text-left">
+            <div className="h-16 w-16 p-1.5 rounded-xl bg-slate-50 border border-slate-200 shrink-0 flex items-center justify-center shadow-2xs">
+              <img src={logoImg} alt="National English School Crest" className="h-full w-full object-contain filter drop-shadow-xs" />
+            </div>
+            <div>
+              <div className="flex items-center justify-center sm:justify-start gap-2 flex-wrap">
+                <span className="font-serif text-lg sm:text-xl font-bold text-navy">National English School</span>
+                <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">
+                  Official Crest & Motto
+                </span>
+              </div>
+              <p className="text-xs text-slate-500 mt-1">
+                Sathiala Campus &bull; <span className="text-sky-700 font-semibold">{SCHOOL_CONTACT_INFO.motto}</span> &bull; English Medium
+              </p>
+            </div>
+          </div>
+          <button 
+            type="button"
+            onClick={() => window.print()}
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-navy bg-sky-50 hover:bg-sky-100 border border-sky-200 transition-colors shrink-0 shadow-2xs"
+          >
+            <Printer className="w-4 h-4 text-sky-700" />
+            Print Schedule
+          </button>
+        </div>
+
         {/* Verification Notice Banner - Yellow/Amber warning with Red notice */}
         <div className="mb-8 rounded-2xl bg-amber-50 border-2 border-amber-300 p-5 sm:p-6 shadow-sm">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">

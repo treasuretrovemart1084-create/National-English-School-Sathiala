@@ -1,40 +1,44 @@
 import React from 'react';
 import { Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logoImg from '../assets/images/logo.jpeg';
+import logoImg from '../assets/images/logo.png';
 import { SCHOOL_CONTACT_INFO } from '../data/feeStructureConfig';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy text-slate-300 relative border-t border-navy-light overflow-hidden">
+    <footer className="bg-black text-slate-300 relative border-t border-neutral-800 overflow-hidden">
       {/* Decorative Brand Accent Line - Light Blue, Gold, and Emerald */}
       <div className="h-1 w-full bg-gradient-to-r from-sky-400 via-amber-400 to-sky-400" />
       {/* Subtle light blue radial glow */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-8 relative z-10">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 xl:gap-16">
           {/* School Info */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-sky-400 rounded-lg p-1 -ml-1">
-              <img 
-                src={logoImg} 
-                alt="National English School Sathiala Logo" 
-                className="h-14 w-14 object-contain shrink-0 rounded-full bg-white shadow-md p-0.5" 
-              />
+            <Link to="/" className="flex items-center gap-3.5 focus:outline-none focus:ring-2 focus:ring-sky-400 rounded-lg p-1 -ml-1 group">
+              <div className="h-16 w-16 shrink-0 flex items-center justify-center p-1.5 rounded-2xl bg-white shadow-lg ring-2 ring-white/20 group-hover:ring-sky-400 transition-all duration-200">
+                <img 
+                  src={logoImg} 
+                  alt="National English School Sathiala Official Crest" 
+                  className="h-full w-full object-contain filter drop-shadow-xs" 
+                />
+              </div>
               <div className="flex flex-col">
-                <span className="font-serif text-xl font-bold leading-none text-white">
+                <span className="font-serif text-xl font-bold leading-tight text-white group-hover:text-sky-300 transition-colors">
                   National English School
                 </span>
-                <span className="text-xs font-semibold tracking-widest text-sky-300 uppercase mt-1">
-                  Sathiala
+                <span className="text-xs font-semibold tracking-wider text-sky-300 uppercase mt-1 flex items-center gap-1.5 flex-wrap">
+                  <span>Sathiala</span>
+                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <span className="text-[11px] text-amber-300 font-bold normal-case tracking-normal">Your Future Begins Here</span>
                 </span>
               </div>
             </Link>
-            <p className="text-sm leading-relaxed text-slate-300 italic font-serif">
-              "{SCHOOL_CONTACT_INFO.motto}"
+            <p className="text-sm leading-relaxed text-amber-300 italic font-serif">
+              {SCHOOL_CONTACT_INFO.motto}
             </p>
             <p className="text-xs leading-relaxed text-slate-400">
               Building academic discipline, character, and lifelong leadership in students from Playgroup to Matric.
@@ -54,7 +58,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-6 font-serif text-lg font-bold text-white border-b border-navy-light pb-2">Quick Links</h3>
+            <h3 className="mb-6 font-serif text-lg font-bold text-white border-b border-neutral-800 pb-2">Quick Links</h3>
             <ul className="space-y-3">
               {[
                 { name: 'Home', path: '/' },
@@ -77,7 +81,7 @@ export function Footer() {
 
           {/* Portals & Information */}
           <div>
-            <h3 className="mb-6 font-serif text-lg font-bold text-white border-b border-navy-light pb-2">Information & Portals</h3>
+            <h3 className="mb-6 font-serif text-lg font-bold text-white border-b border-neutral-800 pb-2">Information & Portals</h3>
             <ul className="space-y-3">
               {[
                 { name: 'Fee Structure (PKR Schedule)', path: '/fee-structure' },
@@ -100,7 +104,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <address className="not-italic">
-            <h3 className="mb-6 font-serif text-lg font-bold text-white border-b border-navy-light pb-2">Contact & Campus</h3>
+            <h3 className="mb-6 font-serif text-lg font-bold text-white border-b border-neutral-800 pb-2">Contact & Campus</h3>
             <ul className="space-y-4 text-sm text-slate-300">
               <li className="flex items-start">
                 <MapPin className="mr-3 h-5 w-5 shrink-0 text-red-400 mt-0.5" aria-hidden="true" />
