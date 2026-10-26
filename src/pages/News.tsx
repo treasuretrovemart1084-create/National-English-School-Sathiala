@@ -9,8 +9,7 @@ import magicShowImg from '../assets/images/magic_show_mascot.png';
 import trophiesImg from '../assets/images/annual_trophies_awards.png';
 import camoStageImg from '../assets/images/camo_stage_performance.png';
 import prayerStageImg from '../assets/images/prayer_recitation_stage.png';
-import assemblyImg from '../assets/images/school_assembly.png';
-import speechImg from '../assets/images/student_speech_podium.png';
+import cultureDayImg from '../assets/images/culture_day_celebration.png';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string, key?: React.Key }) => (
   <motion.div
@@ -130,24 +129,14 @@ function NewsContent() {
       image: exhibitionImg
     },
     {
-      category: "Morning Assembly",
-      icon: BookOpen,
-      title: "Daily Morning Assembly & Character Mentorship",
-      date: "Regular Routine",
-      time: "08:00 AM",
-      desc: "Outdoor morning assembly instilling national spirit, moral recitations, discipline, and principal guidance.",
-      color: "text-green-700 bg-green-100",
-      image: assemblyImg
-    },
-    {
-      category: "Speech & Declamation",
-      icon: Tag,
-      title: "Annual Speech Competition & Head Boy Address",
-      date: "Co-Curriculars",
-      time: "Stage Auditorium",
-      desc: "Fostering leadership and public speaking skills as students address the student body from the official school podium.",
-      color: "text-orange-700 bg-orange-100",
-      image: speechImg
+      category: "Cultural Gala",
+      icon: Trophy,
+      title: "Culture Day Celebrations at National English School",
+      date: "Annual Cultural Gala",
+      time: "10:00 AM",
+      desc: "An exuberant celebration of national heritage and unity as students don traditional attire representing Punjab, Balochistan, Sindh, and Khyber Pakhtunkhwa.",
+      color: "text-emerald-700 bg-emerald-100",
+      image: cultureDayImg
     }
   ];
 

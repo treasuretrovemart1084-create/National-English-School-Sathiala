@@ -13,9 +13,9 @@ import classroomImg from '../assets/images/real_classroom.png';
 import scienceLabImg from '../assets/images/real_science_lab.png';
 import receptionImg from '../assets/images/reception_block.png';
 import dramaDayImg from '../assets/images/drama_day_stage.png';
-import assemblyImg from '../assets/images/school_assembly.png';
-import speechPodiumImg from '../assets/images/student_speech_podium.png';
 import marqueeEventImg from '../assets/images/school_marquee_event.png';
+import cultureDayImg from '../assets/images/culture_day_celebration.png';
+import graduationCapImg from '../assets/images/graduation_cap_building.png';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => (
   <motion.div
@@ -35,7 +35,7 @@ const GALLERY_ITEMS = [
   {
     id: 0,
     category: "Campus",
-    title: "National English School Campus & Graduation Cap",
+    title: "National English School Campus Facade & Grounds",
     src: campusBuildingImg,
     aspect: "aspect-[4/3]"
   },
@@ -111,23 +111,23 @@ const GALLERY_ITEMS = [
   },
   {
     id: 11,
-    category: "Activities",
-    title: "Morning Assembly on Campus Grounds",
-    src: assemblyImg,
+    category: "Events",
+    title: "Annual Ceremony in Grand Marquee",
+    src: marqueeEventImg,
     aspect: "aspect-[4/3]"
   },
   {
     id: 12,
-    category: "Activities",
-    title: "Student Leadership Speech from Official Podium",
-    src: speechPodiumImg,
-    aspect: "aspect-[3/4]"
+    category: "Events",
+    title: "Culture Day - Regional Heritage Presentations & Attire",
+    src: cultureDayImg,
+    aspect: "aspect-[4/3]"
   },
   {
     id: 13,
-    category: "Events",
-    title: "Annual Ceremony in Grand Marquee",
-    src: marqueeEventImg,
+    category: "Campus",
+    title: "National English School Campus & Graduation Cap",
+    src: graduationCapImg,
     aspect: "aspect-[4/3]"
   }
 ];

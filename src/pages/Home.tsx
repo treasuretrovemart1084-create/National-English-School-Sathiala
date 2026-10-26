@@ -524,7 +524,7 @@ function HighlightsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { metric: "98%", label: "Matric Result Pass Rate", color: "text-emerald-700" },
-            { metric: "15+", label: "Years of Educational Service", color: "text-amber-600" },
+            { metric: "10+", label: "Years of Educational Service", color: "text-amber-600" },
             { metric: "850+", label: "Enrolled Students", color: "text-navy" },
             { metric: "45+", label: "Qualified Teaching Staff", color: "text-red-600" },
           ].map((stat, i) => (

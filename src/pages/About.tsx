@@ -102,7 +102,7 @@ export function About() {
                 </div>
                 <div>
                   <p className="font-serif text-base font-bold text-navy leading-tight">Your Future Begins Here</p>
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 mt-0.5">Sathiala &bull; Est. 1998</p>
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 mt-0.5">Sathiala &bull; Est. 2010</p>
                 </div>
               </div>
             </FadeIn>

@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import facilitiesHeroImg from '../assets/images/school_grad_cap.png';
-import campusSecurityImg from '../assets/images/school_main_gate.png';
+import campusSecurityImg from '../assets/images/graduation_cap_building.png';
 import classImg from '../assets/images/real_classroom.png';
 import sciImg from '../assets/images/real_science_lab.png';
 import receptionImg from '../assets/images/reception_block.png';
