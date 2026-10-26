@@ -110,7 +110,14 @@ export function Footer() {
                 <MapPin className="mr-3 h-5 w-5 shrink-0 text-red-400 mt-0.5" aria-hidden="true" />
                 <span>
                   <strong className="text-white block font-medium">National English School</strong>
-                  {SCHOOL_CONTACT_INFO.address}
+                  <a 
+                    href="https://www.google.com/maps/place/NES+National+English+School+%D9%86%DB%8C%D8%B4%D9%86%D9%84+%D8%A7%D9%86%DA%AF%D9%84%D8%B4+%D8%B3%DA%A9%D9%88%D9%84%E2%80%AD/@32.2646417,74.9754334,17z/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:text-amber-300 transition-colors inline-block"
+                  >
+                    {SCHOOL_CONTACT_INFO.address}
+                  </a>
                 </span>
               </li>
               <li className="flex items-start">

@@ -22,7 +22,10 @@ import {
   Sparkles,
   Phone,
   Mail,
-  Award
+  Award,
+  MapPin,
+  Navigation,
+  ExternalLink
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroImage from '../assets/images/school_hero_clean.png';
@@ -63,6 +66,7 @@ export function Home() {
       <NewsSection />
       <TestimonialsSection />
       <FAQSection />
+      <CampusMapSection />
       <CTASection />
       <QuickApplyButton />
     </div>
@@ -805,6 +809,80 @@ function FAQSection() {
             </FadeIn>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function CampusMapSection() {
+  const googleMapsUrl = "https://www.google.com/maps/place/NES+National+English+School+%D9%86%DB%8C%D8%B4%D9%86%D9%84+%D8%A7%D9%86%DA%AF%D9%84%D8%B4+%D8%B3%DA%A9%D9%88%D9%84%E2%80%AD/@32.2646417,74.9754334,17z/";
+
+  return (
+    <section className="py-20 bg-slate-50 border-t border-slate-200">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <FadeIn>
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-red-100 text-red-800 text-xs font-bold uppercase tracking-wider mb-3">
+              <MapPin className="w-3.5 h-3.5 text-red-600" />
+              Campus Location
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy mb-3">
+              Visit National English School Sathiala
+            </h2>
+            <p className="text-slate-600 text-base">
+              Conveniently situated in Sathiala, District Narowal. Open for parents, visitors, and new student admissions.
+            </p>
+          </FadeIn>
+        </div>
+
+        <FadeIn delay={0.1}>
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden p-3 sm:p-5">
+            <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] min-h-[360px] max-h-[480px] rounded-2xl overflow-hidden bg-slate-100 shadow-inner">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3373.756183342005!2d74.9754334!3d32.26464169999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391c010cabfc0b4f%3A0xa7e4f691033c74a7!2zTkVTIE5hdGlvbmFsIEVuZ2xpc2ggU2Nob29sINmG24zYtNmG2YQg2KfZhtqv2YTYtCDYs9qp2YjZhA!5e0!3m2!1sen!2s!4v1793026130587!5m2!1sen!2s" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="NES National English School Location Map"
+                className="w-full h-full"
+              />
+            </div>
+
+            <div className="mt-4 p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              <div>
+                <h3 className="font-serif text-lg font-bold text-navy flex items-center gap-2">
+                  <span>NES National English School (نیشنل انگلش سکول)</span>
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
+                  {SCHOOL_CONTACT_INFO.address} &bull; Coordinates: 32.2646° N, 74.9754° E
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3 w-full md:w-auto flex-wrap sm:flex-nowrap">
+                <a
+                  href={googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-navy text-white font-bold text-xs sm:text-sm hover:bg-sky-800 transition-colors shadow-sm"
+                >
+                  <Navigation className="w-4 h-4 text-amber-300" />
+                  <span>Get Directions</span>
+                  <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+                </a>
+                <Link
+                  to="/contact"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-800 font-bold text-xs sm:text-sm hover:bg-slate-100 transition-colors shadow-2xs"
+                >
+                  <Phone className="w-4 h-4 text-emerald-600" />
+                  <span>Contact Front Office</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
